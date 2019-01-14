@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="templates/common.xhtml">
+	<ui:define name="pageTitle">Actores</ui:define>
+	<ui:define name="pageHeader">Actores</ui:define>
+	<ui:define name="body">
+		<h:dataTable value="#{actorMB.lstActor}" var="actor" border="1">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+				#{actor.actorId}
+			</h:column>
+			<h:column>
+				<f:facet name="header">First name</f:facet>
+				#{actor.firstName}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Last name</f:facet>
+				#{actor.lastName}
+			</h:column>
+		</h:dataTable>
+	</ui:define>
+</ui:composition>
+
+</html>
